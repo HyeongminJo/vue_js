@@ -7,7 +7,12 @@ var app = new Vue({
     data: {
         message:'Hello Vue.js!',
         list: ['사과', '바나나', '딸기'],
-        show: true
+        show: true,
+        newTodoText: '',
+        visitCount: 0,
+        hideCompleted: false,
+        todos: [],
+        error: null
     },
     methods: {
         handleClick:function(event) {
