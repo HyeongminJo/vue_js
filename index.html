@@ -8,14 +8,18 @@
 </head>
 <body>
     <div id="app">
-        <h1>Hello {{message.value}}</h1>
-        <p>{{message.value.length}}</p>
+        <h1>Hello {{message2.value}}</h1>
+        <p>{{message2.value.length}}</p>
         <p>{{list[2]}}</p>
         <p>{{list[num]}}</p>
-        <p>{{message.value.length >= 10 ? '10글자 이상' : '10글자 미만'}}</p>
+        <p>{{message2.value.length >= 10 ? '10글자 이상' : '10글자 미만'}}</p>
         <p>{{Math.round(3.14)}}</p>
         ///////////////////////////////////////
-        <input v-model="message.value">
+        <input v-model="message2.value">
+        <input type="text" v-bind:value="message">
+        <input type="text" :value="message">
+        <div v-bind:text-content.prop="message">...</div>
+        <div v-bind:scroll-top.prop="scroll">...</div>
         <br>
         <button v-on:click="show=!show">변경하기</button>
         <transition>
